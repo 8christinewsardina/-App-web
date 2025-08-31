@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 
 export default function Tasks() {
@@ -10,6 +9,11 @@ export default function Tasks() {
   // Simulate fetching tasks based on user identity
   useEffect(() => {
     // Here, integrate with AI to generate personalized tasks
+    // For now, we'll keep the static tasks
+    setTasks([
+      { id: '1', title: '个性化任务：完成报告', type: 'personal' },
+      { id: '2', title: '共同任务：团队会议', type: 'shared' },
+    ]);
   }, []);
 
   return (
